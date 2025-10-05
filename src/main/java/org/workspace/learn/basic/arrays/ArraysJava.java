@@ -1,4 +1,4 @@
-package org.workspace.learn.basic.overview.arrays;
+package org.workspace.learn.basic.arrays;
 
 public class ArraysJava {
     public static void main(String[] args) {
