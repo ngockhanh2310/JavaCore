@@ -21,6 +21,8 @@ public class OverloadingExample {
     }
 
     public static void main(String[] args) {
-
+        System.out.println(addNumber(1, 2));
+        System.out.println(addNumber(3, 5, 4));
+        System.out.println(addNumber(2, 4, 5, 6, 3, 2, 1));
     }
 }
