@@ -1,6 +1,6 @@
 package org.workspace.learn.basic.arrays.one_dimensional;
 
-public class example {
+public class ArraysJava {
     public static void main(String[] args) {
         // 1. Khai báo và khởi tạo mảng
         int[] numbers = {10, 20, 30, 40, 50};
@@ -27,5 +27,6 @@ public class example {
             sum += num;
         }
         System.out.println("\nTổng các phần tử = " + sum);
+        // Exception: java.lang.ArrayIndexOutOfBoundsException
     }
 }
