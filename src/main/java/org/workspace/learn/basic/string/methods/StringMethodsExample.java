@@ -16,6 +16,7 @@ public class StringMethodsExample {
         System.out.println(text.indexOf("Java")); // Find index - Tìm vị trí xuất hiện đầu tiên
         System.out.println(text.lastIndexOf("Java")); // Find last index - Tìm vị trí xuất hiện cuối cùng
         System.out.println(text.substring(2, 7)); // Substring - Cắt chuỗi con
+        System.out.println(text.concat(text2)); // nối chuỗi
 
         int result = text.compareTo(text2);
         //Nếu result = 0 thì hai chuỗi đó bằng nhau.
