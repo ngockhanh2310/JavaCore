@@ -23,5 +23,13 @@ public class StringMethodsExample {
         //Nếu result < 0 thì chuỗi string1 < string2.
         //Nếu result > 0 thì chuỗi string1 > string2.
         System.out.println(result == 0 ? "Equal" : "Not equal");
+
+        boolean test = text.matches(text2);
+        if (test) {
+            System.out.println("Match");
+        } else {
+            System.out.println("Not match");
+        }
+        
     }
 }
