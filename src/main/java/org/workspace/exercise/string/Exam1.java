@@ -10,7 +10,9 @@ public class Exam1 {
         System.out.println("Lowercase: " + lowercase(yourName));
         System.out.println("Capitalize Words: " + capitalizeWords(yourName));
         System.out.println("Capitalize Words 2: " + capitalizeWords2(yourName));
-        System.out.println("Reversed String: " + reverseString(capitalizeWords(yourName)));
+        System.out.println("Reversed String: " + reverseString(uppercase(yourName)));
+        System.out.println("Reversed String 2: " + reverseString2(lowercase(yourName)));
+        System.out.println("Reversed String 3: " + reverseString3(capitalizeWords(yourName)));
     }
 
     private static String input() {
@@ -79,16 +81,32 @@ public class Exam1 {
     private static String reverseString(String str) {
         StringBuilder sb = new StringBuilder(str);
         return sb.reverse().toString();
+    }
 
-/**
- * Cách 2:
- */
-// region - cách 2
-//        StringBuilder reversed = new StringBuilder();
-//        for (int i = str.length() - 1; i >= 0; i--) {
-//            reversed.append(str.charAt(i));
-//        }
-//        return reversed.toString();
-// endregion
+    private static String reverseString2(String str) {
+        char[] charArray = str.toCharArray();
+        int left = 0;
+        int right = charArray.length - 1;
+        while (left < right) {
+            // swap characters
+            char temp = charArray[left];
+            charArray[left] = charArray[right];
+            charArray[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(charArray);
+    }
+
+    private static String reverseString3(String str) {
+        if (str == null || str.isEmpty()) {
+            return str;
+        }
+        String[] characters = str.split("\\s+");
+        StringBuilder reversed = new StringBuilder();
+        for (int i = characters.length - 1; i >= 0; i--) {
+            reversed.append(characters[i]).append(" ");
+        }
+        return reversed.toString().trim();
     }
 }
