@@ -22,7 +22,7 @@ public class StringMethodsExample {
         //Nếu result = 0 thì hai chuỗi đó bằng nhau.
         //Nếu result < 0 thì chuỗi string1 < string2.
         //Nếu result > 0 thì chuỗi string1 > string2.
-        System.out.println(result == 0 ? "Equal" : "Not equal");
+        System.out.println(result != 0 ? "Not equal" : "Equal");
 
         boolean test = text.matches(text2);
         if (test) {
@@ -30,6 +30,6 @@ public class StringMethodsExample {
         } else {
             System.out.println("Not match");
         }
-        
+
     }
 }
